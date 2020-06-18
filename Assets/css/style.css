@@ -1,0 +1,53 @@
+#title {
+    background-color: gray;
+    color: rgb(232, 235, 232);
+    height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+#searchcity{
+    background-color: lightgrey;
+    height: 800px;
+    padding: 25px;
+}
+
+#cityarea{
+    background-color: black;
+    height: 800px;
+    padding: 30px;
+}
+
+#citydata{
+    background-color: white;
+    height: 300px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-radius: 20px;
+}
+
+#cityname{
+
+}
+
+#forcast{
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    
+
+}
+
+.card{
+    background-color: blue;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+#forcastarea{
+    background-color: brown;
+    flex-direction: row;
+    border-radius: 20px;
+}
