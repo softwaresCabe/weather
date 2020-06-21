@@ -19,9 +19,9 @@
             <div class="col-3" id="searchcity">
               <div class="input-group mb-3" id="searchinput">
                 <label class="col-12">Search For A City :</label>
-                <input type="text" class="form-control" placeholder="Enter City" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input id="cityinput" type="text" class="form-control" placeholder="Enter City" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button">Search</button>
+                  <button class="btn btn-outline-secondary" id="searchbtn" type="button">Search</button>
                 </div>
               </div>
             </div>
@@ -29,9 +29,9 @@
 
             <div class="col-9" id="cityarea">
               <div class="col-12" id="citydata">
-                <h1 id="cityname">City Name</h1>
-                <p id="citytemp">temperature : </p>
-                <p id="cityhum">humidity : </p>
+                <h1 id="cityname"></h1>
+                <p id="citytemp">Temperature : </p>
+                <p id="cityhum">Humidity : </p>
                 <p id="citywind">Wind Speed : </p>
                 <p id="cityuv">UV Index : </p>
               </div>
@@ -41,55 +41,63 @@
                 <!-- create 5 day forcast -->
                 <label id="forcast"> 5 Day Forcast : </label>
 
-                <!-- Day 1 -->
-                <div class="card col-2">
-                  <img class="card-img-top" src="..." alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
+                <div class="row text-center">
 
-                <!-- Day 2 -->
-                <div class="card col-2">
-                  <img class="card-img-top" src="..." alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <!-- day 1 -->
+                  <div class="card col-2" index="0">
+                    <h5 class="card-title"></h5>
+                    <img class="card-img-top" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" id ="temp"></p>
+                      <p class="card-text" id ="humidity"></p>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Day 3 -->
-                <div class="card col-2">
-                  <img class="card-img-top" src="..." alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                   <!-- day 2 -->
+                   <div class="card col-2" index="1">
+                    <h5 class="card-title"></h5>
+                    <img class="card-img-top" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" id ="temp"></p>
+                      <p class="card-text" id ="humidity"></p>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Day 4 -->
-                <div class="card col-2">
-                  <img class="card-img-top" src="..." alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
 
-                <!-- Day 5 -->
-                <div class="card col-2">
-                  <img class="card-img-top" src="..." alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                   <!-- day 3 -->
+                   <div class="card col-2" index="2">
+                    <h5 class="card-title"></h5>
+                    <img class="card-img-top" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" id ="temp"></p>
+                      <p class="card-text" id ="humidity"></p>
+                    </div>
                   </div>
+
+
+                   <!-- day 4 -->
+                   <div class="card col-2" index="3">
+                    <h5 class="card-title"></h5>
+                    <img class="card-img-top" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" id ="temp"></p>
+                      <p class="card-text" id ="humidity"></p>
+                    </div>
+                  </div>
+
+                   <!-- day 5 -->
+                   <div class="card col-2" index="4">
+                    <h5 class="card-title"></h5>
+                    <img class="card-img-top" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text" id ="temp"></p>
+                      <p class="card-text" id ="humidity"></p>
+                    </div>
+                  </div>
+
+
                 </div>
+    
 
               </div>
 
@@ -99,10 +107,8 @@
         </div>
       </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="Assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 
 </html>

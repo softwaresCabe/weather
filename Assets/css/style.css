@@ -1,3 +1,14 @@
+p {
+    font-size: 20px;
+
+}
+
+.card-title{
+    font-size: 25px;
+
+}
+
+
 #title {
     background-color: gray;
     color: rgb(232, 235, 232);
@@ -9,45 +20,53 @@
 
 #searchcity{
     background-color: lightgrey;
-    height: 800px;
+    height: 900px;
     padding: 25px;
 }
 
 #cityarea{
-    background-color: black;
-    height: 800px;
-    padding: 30px;
+    background-color: white;
+    height: 900px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
 }
 
 #citydata{
-    background-color: white;
+    background-color: lightgray;
     height: 300px;
     border-style: solid;
-    border-color: lightgrey;
+    border-color: black;
     border-radius: 20px;
-}
-
-#cityname{
-
+    box-shadow: 0px 0px 10px black;
 }
 
 #forcast{
-    color: white;
-    padding: 10px;
+    color: black;
     font-size: 30px;
-    
-
 }
 
-.card{
-    background-color: blue;
+.card.col-2{
+    background-color: rgba(0, 47, 255, 0.836);
     border-radius: 20px;
-    padding: 20px;
+    margin: 30px;
+    height: 400px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 10px black;
 
 }
 
 #forcastarea{
-    background-color: brown;
-    flex-direction: row;
+    background-color: lightgray;
+    border-color: black;
+    border-radius: 20px;
+    border-style: solid;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px black;
+}
+
+#searchbtn{
+    background-color: gray ;
+    margin-left: 10px;
+    color: black;
     border-radius: 20px;
 }
