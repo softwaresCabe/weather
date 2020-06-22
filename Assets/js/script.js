@@ -6,7 +6,10 @@ var searchCity = "";
 
 var weatherIconURL = "";
 
-var city = "los angeles"
+var city = "los angeles";
+
+var searchHistory = [];
+
 
 
 // Here we are building the URL we need to query the database for icon data
@@ -19,12 +22,30 @@ var forcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + 
 
     $("#searchbtn").on("click", function(){
       city = $("#cityinput").val();
-      console.log(city);
+      $("#cityinput").val('');
+      searchHistory.push(city);
+      updateSearchHistory();
+      getCurrentData();
+      get5DayForecast();
+    })
+
+    $("#mybtn").on("click", function(){
+      console.log('here');
+      var tempText = $(this).text();
+      city = tempText;
       getCurrentData();
       get5DayForecast();
     })
 
   });
+
+  function updateSearchHistory(){
+    $("#recentsearchBTns").empty();
+    for(var i = 0; i < searchHistory.length; i++){
+      $("#recentsearchBTns").prepend('<button class="col-12 citybtn" >'+ searchHistory[i] +'</button>')
+    }
+
+  }
 
 
 
@@ -116,7 +137,20 @@ var forcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + 
               // store all of the retrieved data inside of an object called "UVresponse"
               .then(function(UVresponse) {
                 //display UV idex
-                $("#cityuv").text("UV Index : " + UVresponse.value );
+                $("#cityuvdata").text( UVresponse.value );
+
+                //change color of background based on UV index
+                if(UVresponse.value >= 11){
+                  $("#cityuvdata").css("background-color", "rgb(248, 4, 78)");
+                }else if ( UVresponse.value >= 8 && UVresponse.value < 11 ){
+                  $("#cityuvdata").css("background-color", "red");
+                }else if ( UVresponse.value >= 6 && UVresponse.value < 8 ){
+                  $("#cityuvdata").css("background-color", "orange");
+                }else if ( UVresponse.value >= 3 && UVresponse.value < 6 ){
+                  $("#cityuvdata").css("background-color", "yellow");
+                }else if ( UVresponse.value >= 1 && UVresponse.value < 3 ){
+                  $("#cityuvdata").css("background-color", "lightgreen");
+                }
 
               });
         });

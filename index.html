@@ -24,6 +24,10 @@
                   <button class="btn btn-outline-secondary" id="searchbtn" type="button">Search</button>
                 </div>
               </div>
+
+              <div id="recentsearchBTns">
+                
+              </div>
             </div>
 
 
@@ -33,7 +37,10 @@
                 <p id="citytemp">Temperature : </p>
                 <p id="cityhum">Humidity : </p>
                 <p id="citywind">Wind Speed : </p>
-                <p id="cityuv">UV Index : </p>
+                <div style="overflow: hidden;">
+                  <p style="float: left;">UV Index : </p>
+                  <p style="float: left;" id="cityuvdata" class="col-1 text-center"></p>
+                </div>
               </div>
 
               <div class="col-12" id="forcastarea">

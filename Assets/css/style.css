@@ -8,6 +8,15 @@ p {
 
 }
 
+#cityuvdata {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.citybtn{
+    height: 50px;
+}
+
 
 #title {
     background-color: gray;
