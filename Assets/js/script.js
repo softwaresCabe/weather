@@ -48,18 +48,9 @@ var forcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + 
         for(var i =0; i< response.list.length; i++){
 
           if (response.list[i].dt_txt.indexOf("15:00:00") !== -1){
-            console.log(response.list[i]);
-
             //build URL to get weather icon
             var weatherIconURL = "http://openweathermap.org/img/wn/"+ response.list[i].weather[0].icon +"@2x.png";
-
-            //get weather icon from API
-            $.ajax({
-              url: weatherIconURL,
-              method: "GET"
-            }).then(function(iconResponse){
-              $('[index='+ dayIndex +']').find('img').attr('scr', iconResponse);
-            });
+              $('[index='+ dayIndex +']').find('img').attr("src", weatherIconURL);
 
             //set date for each forcast card
             d.setDate(startDateOfForcast += 1);
@@ -67,9 +58,9 @@ var forcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + 
 
             //set temp for each card
             var tempF = (response.list[i].main.temp - 273.15) * 1.80 + 32;
-            
             $('[index='+ dayIndex +']').find('#temp').text("Temp : " + tempF.toFixed(0) + '\u00B0' + "F");
-
+            
+            //set humidity for each card
             $('[index='+ dayIndex +']').find('#humidity').text( "Humidity : " + response.list[i].main.humidity + " % ");
             
             dayIndex++;
