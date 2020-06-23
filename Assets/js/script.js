@@ -2,8 +2,6 @@
 // My api key
 var APIKey = "f0f966d5ceb39402c51425703a815a8c";
 
-var searchCity = "";
-
 var weatherIconURL = "";
 
 var city = "los angeles";
